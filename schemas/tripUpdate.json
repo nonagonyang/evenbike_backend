@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": ["end_dock", "end_time"],
+  "properties": {
+    "end_dock": {
+      "type": "string",
+      "default": "",
+      "title": "The end_dock Schema",
+      "examples": ["BikePoints_180"]
+    },
+    "end_time": {
+      "type": "string",
+      "default": "",
+      "title": "The end_time Schema",
+      "examples": ["2022-08-10 10:23:54"]
+    }
+  },
+  "examples": [
+    {
+      "end_dock": "BikePoints_180",
+      "end_time": "2022-08-10 10:23:54"
+    }
+  ]
+}

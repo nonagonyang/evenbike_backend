@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": ["email", "password", "weight", "height"],
+  "properties": {
+    "email": {
+      "type": "string",
+      "default": "",
+      "title": "The email Schema",
+      "examples": ["testuserx@gmail.com"]
+    },
+    "password": {
+      "type": "string",
+      "default": "",
+      "title": "The password Schema",
+      "examples": ["asdf2335134eskqse"]
+    },
+    "weight": {
+      "type": "number",
+      "default": 0.0,
+      "title": "The weight Schema",
+      "examples": [130.9]
+    },
+    "height": {
+      "type": "integer",
+      "default": 0,
+      "title": "The height Schema",
+      "examples": [180]
+    }
+  },
+  "examples": [
+    {
+      "email": "testuserx@gmail.com",
+      "password": "asdf2335134eskqse",
+      "weight": 130.9,
+      "height": 180
+    }
+  ]
+}

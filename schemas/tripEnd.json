@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": ["eco_points", "active_points", "total_points"],
+  "properties": {
+    "eco_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The eco_points Schema",
+      "examples": [10]
+    },
+    "active_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The active_points Schema",
+      "examples": [5]
+    },
+    "total_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The total_points Schema",
+      "examples": [15]
+    }
+  },
+  "examples": [
+    {
+      "eco_points": 10,
+      "active_points": 5,
+      "total_points": 15
+    }
+  ]
+}
