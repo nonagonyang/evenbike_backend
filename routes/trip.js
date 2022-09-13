@@ -14,6 +14,7 @@ const Level = require("../models/level");
 const tripNewSchema = require("../schemas/tripNew.json");
 const tripUpdateSchema = require("../schemas/tripUpdate.json");
 const tripEndSchema = require("../schemas/tripEnd.json");
+const { response } = require("express");
 
 const router = express.Router();
 
@@ -57,6 +58,8 @@ router.get("/docks", ensureLoggedIn, async function (req, res, next) {
 router.get("/docks/:location", ensureLoggedIn, async function (req, res, next) {
   try {
     const location = JSON.parse(req.params.location);
+    console.log("trip.js", location);
+    // const location = { lat: 51.519914, lng: -0.136039 };
     const docks = await Trip.recommendDocks(location);
     return res.json({ docks });
   } catch (err) {
