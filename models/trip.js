@@ -168,8 +168,11 @@ class Trip {
 
   /** after the trip has ended, calculate the trip's ecopoints */
   static async calculateEcoPoints(id) {
+    console.log("calculate Eco Points Helper", id);
     const trip = await this.get(id);
+    console.log("calculate Eco Points Helper Trip", trip);
     const start_dock_id = trip["start_dock"].split(",")[0];
+    console.log("calculate Eco Points Helper start_dock_id", start_dock_id);
     const end_dock_id = trip["end_dock"].split(",")[0];
     const start_occupancy = await getOccupancy(start_dock_id);
     const end_occupancy = await getOccupancy(end_dock_id);
