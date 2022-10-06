@@ -30,7 +30,34 @@ For backend testing, cd into the repository folder backend, type `npm run pretes
 For frontend testing, cd into the repository folder frontend, type `npm test`.
 
 ## Userflow
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FiEGk39P20XTJU9W2MXF0JZ%2Fuserflow-EvenBike%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+![Userflow created on Figma](https://github.com/nonagonyang/evenbike_backend/blob/main/userflow.png "EvenBike Userflow")
+
+
+## API
+
+### Evenbike server-side API
+EvenBike is a full-stack web application. The backend is a RESTful API with Node.js. I used Express as the application framework to help manage servers and routes. I used Middleware, which takes an incoming request and checks the authorization information(JWT) to search for a user in the database. JSON schema is used to ensure the quality of client-submitted data.
+
+It has A client-server architecture made up of clients, servers, and resources, with requests managed through HTTP. The resources here come from my psql_database and an external API.
+
+The backedn API is structured with three major routes: auth, profile, and trip. Auth rotues are for user login and registeration. Profile routes allow users and admin to get, post, and modify user profiles. Trip routes allow users to get recommended bike docks, start a trip, end a trip, and view trip data. 
+
+![API design created on Figma](https://github.com/nonagonyang/evenbike_backend/blob/main/API%20design.png "EvenBike Backend API design")
+
+
+### External API 
+* https://api.tfl.gov.uk/swagger/ui/index.html?url=/swagger/docs/v1#!/BikePoint/BikePoint_GetAll
+
+
+## Tech Stack
+* Javascript
+* SQL
+* React
+* Node.js
+* PostgreSQL Database
+* Jest
+* Supertest
+* Material UI
 
 
 ## Author
