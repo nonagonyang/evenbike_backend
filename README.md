@@ -2,7 +2,7 @@
 
 ## About
 
-EvenBike helps to make public biking system more eco-friendly . Many cities in the world now have implemented public bike systems. However, one of the problems with the bike-sharing system is that bikes need to be redistributed usually at the end of the day to ensure enough bikes in popular locations. With mobile-first design in mind, EvenBike, a web application, enables public bike riders to help rebalance the number of bikes in each bike dock, reducing the need to redistribute bikes with trucks. 
+EvenBike helps to make public biking system more eco-friendly. Many cities in the world now have implemented public bike systems. However, one of the problems with the bike-sharing system is that bikes need to be redistributed usually at the end of the day to ensure enough bikes in popular locations. With mobile-first design in mind, EvenBike, a web application, enables public bike riders to help rebalance the number of bikes in each bike dock, reducing the need to redistribute bikes with trucks. 
 
 ## Features
 
