@@ -14,6 +14,7 @@ const User = require("../models/user");
 const express = require("express");
 const router = new express.Router();
 const { createToken } = require("../helpers/jwt");
+const { authRegisterController } = require("../controllers/auth");
 
 /** POST /auth/token:  { email, password } => { token }
  *
@@ -48,24 +49,6 @@ router.post("/token", async function (req, res, next) {
  * Authentication required: none
  */
 
-router.post("/register", async function (req, res, next) {
-  try {
-    let { username, email, password, height, weight } = req.body;
-    height = Number(height);
-    weight = Number(weight);
-    let data = { username, email, password, height, weight };
-    const validator = jsonschema.validate(data, userRegisterSchema);
-    if (!validator.valid) {
-      const errs = validator.errors.map((e) => e.stack);
-      throw new BadRequestError(errs);
-    }
-
-    const newUser = await User.register({ ...data, is_admin: false });
-    const token = createToken(newUser);
-    return res.status(201).json({ token });
-  } catch (err) {
-    return next(err);
-  }
-});
+router.post("/register", authRegisterController);
 
 module.exports = router;

@@ -201,9 +201,6 @@ class Trip {
     const trip = await this.get(id);
     const start_dock_id = trip["start_dock"].split(",")[0];
     const end_dock_id = trip["end_dock"].split(",")[0];
-    // TODO write getDistance function
-    // biking distance from point1 to point2
-    //multiple routes between two points???
     const distance = await getDistance(start_dock_id, end_dock_id);
     return distance;
   }
